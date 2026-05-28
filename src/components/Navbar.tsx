@@ -37,9 +37,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        <button className="px-6 py-2.5 rounded-full bg-base-950 text-base-50 text-sm font-medium hover:bg-base-900 transition-all duration-300 active:scale-[0.97]">
-          Get Started
-        </button>
       </div>
     </nav>
   )
