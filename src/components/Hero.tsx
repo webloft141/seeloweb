@@ -19,7 +19,7 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 animate-fade-in-up animation-delay-400">
-          <button className="px-8 py-4 rounded-full bg-base-950 text-base-50 font-semibold text-base transition-all duration-300 hover:bg-base-900 hover:shadow-xl active:scale-[0.97]">
+          <button onClick={() => document.getElementById('downloads')?.scrollIntoView({ behavior: 'smooth' })} className="px-8 py-4 rounded-full bg-base-950 text-base-50 font-semibold text-base transition-all duration-300 hover:bg-base-900 hover:shadow-xl active:scale-[0.97]">
             Download for free
           </button>
           <button className="px-8 py-4 rounded-full text-base-500 text-base font-medium hover:text-base-900 hover:bg-base-100/80 transition-all duration-300 active:scale-[0.97] backdrop-blur-sm">

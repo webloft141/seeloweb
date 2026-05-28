@@ -53,7 +53,7 @@ export default function Features() {
   const { ref, visible } = useScrollReveal()
 
   return (
-    <section className="py-32 md:py-44 bg-base-50 relative">
+    <section id="features" className="py-32 md:py-44 bg-base-50 relative">
       <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-base-950 to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6">

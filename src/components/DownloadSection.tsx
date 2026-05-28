@@ -97,7 +97,7 @@ export default function DownloadSection() {
   }
 
   return (
-    <section className="py-32 md:py-44 bg-base-50 relative overflow-hidden">
+    <section id="downloads" className="py-32 md:py-44 bg-base-50 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div
           ref={ref}
