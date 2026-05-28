@@ -70,7 +70,7 @@ function FeatureCard({ f, i }: { f: typeof features[0]; i: number }) {
       ref={ref}
       className={`group reveal reveal-delay-${(i % 3) + 1} ${visible ? 'visible' : ''}`}
     >
-      <div className="size-10 rounded-lg bg-accent-light flex items-center justify-center text-accent mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-400">
+      <div className="size-10 rounded-lg bg-accent-light flex items-center justify-center text-accent mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
         {f.icon}
       </div>
       <span className="text-3xl font-bold text-base-200/50 group-hover:text-accent/20 transition-colors duration-500 select-none">

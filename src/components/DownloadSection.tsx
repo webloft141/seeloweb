@@ -79,7 +79,7 @@ export default function DownloadSection() {
     setProgress(1)
     const a = document.createElement('a')
     a.href = DOWNLOAD_BASE + url
-    a.download = platform.toLowerCase() + '-installer'
+    a.download = platform.toLowerCase().replace(/\s+/g, '-') + '-installer'
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)

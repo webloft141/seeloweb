@@ -73,7 +73,7 @@ function StepCard({ step, i }: { step: typeof steps[0]; i: number }) {
     >
       <div className="relative p-8 rounded-2xl border border-base-200 bg-base-100/50 hover:bg-base-100 hover:border-base-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-500">
         <div className="flex items-center gap-4 mb-6">
-          <div className="size-12 rounded-xl bg-accent-light flex items-center justify-center text-accent group-hover:scale-110 group-hover:rotate-3 transition-all duration-400">
+          <div className="size-12 rounded-xl bg-accent-light flex items-center justify-center text-accent group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
             {step.icon}
           </div>
           <span className="text-3xl font-bold text-base-200/50 select-none">{step.number}</span>
