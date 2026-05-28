@@ -93,6 +93,7 @@ export default function DownloadSection() {
 
   const resetDownload = () => {
     setDownloading(null)
+    setProgress(0)
   }
 
   return (
@@ -159,33 +160,33 @@ export default function DownloadSection() {
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <p className="text-sm text-base-800 font-medium transition-colors">
-                    Downloading {downloading}
+                    {downloading}
                   </p>
                   <p className="text-xs text-base-500 mt-0.5 transition-colors">
-                    {progress < 100 ? `${Math.floor(progress)}%` : 'Complete'}
+                    {progress < 100 ? `Downloading ${Math.floor(progress)}%` : 'Download complete'}
                   </p>
                 </div>
-                {progress < 100 && (
-                  <button
-                    onClick={resetDownload}
-                    className="size-7 rounded-lg bg-base-200/50 flex items-center justify-center text-base-500 hover:text-base-800 hover:bg-base-200 transition-all"
-                  >
-                    <svg className="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                )}
+                <button
+                  onClick={resetDownload}
+                  className="size-7 rounded-lg bg-base-200/50 flex items-center justify-center text-base-500 hover:text-base-800 hover:bg-base-200 transition-all hover:rotate-90"
+                >
+                  <svg className="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
 
               <div className="relative h-1.5 rounded-full bg-base-200 overflow-hidden">
                 <div
-                  className="absolute inset-y-0 left-0 rounded-full bg-accent transition-all duration-200 ease-out"
+                  className="absolute inset-y-0 left-0 rounded-full bg-accent transition-all duration-500 ease-out"
                   style={{ width: `${Math.min(progress, 100)}%` }}
                 />
               </div>
 
               {progress >= 100 && (
-                <p className="mt-4 text-sm text-base-500 text-center transition-colors">Download complete</p>
+                <p className="mt-4 text-sm text-base-500 text-center transition-colors animate-fade-in">
+                  Ready to install &mdash; close this to download another
+                </p>
               )}
             </div>
           </div>

@@ -37,7 +37,7 @@ export default function HowItWorks() {
   const { ref, visible } = useScrollReveal()
 
   return (
-    <section id="how-it-works" className="relative py-32 md:py-44 bg-base-50 transition-colors overflow-hidden">
+    <section id="how-it-works" className="relative py-32 md:py-44 bg-base-50 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div
           ref={ref}
@@ -47,7 +47,7 @@ export default function HowItWorks() {
             <span className="w-8 h-px bg-accent/50" />
             How it works
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold text-base-950 tracking-tight leading-[1.05] transition-colors">
+          <h2 className="text-4xl md:text-6xl font-bold text-base-950 tracking-tight leading-[1.05]">
             Three steps.
             <br />
             <span className="text-base-400">Zero friction.</span>
@@ -71,15 +71,15 @@ function StepCard({ step, i }: { step: typeof steps[0]; i: number }) {
       ref={ref}
       className={`group relative reveal reveal-delay-${i + 1} ${visible ? 'visible' : ''}`}
     >
-      <div className="relative p-8 rounded-2xl border border-base-200 bg-base-100/50 hover:bg-base-100 hover:border-base-300 transition-all duration-500 hover:shadow-lg">
+      <div className="relative p-8 rounded-2xl border border-base-200 bg-base-100/50 hover:bg-base-100 hover:border-base-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-500">
         <div className="flex items-center gap-4 mb-6">
-          <div className="size-12 rounded-xl bg-accent-light flex items-center justify-center text-accent group-hover:scale-110 transition-transform duration-300">
+          <div className="size-12 rounded-xl bg-accent-light flex items-center justify-center text-accent group-hover:scale-110 group-hover:rotate-3 transition-all duration-400">
             {step.icon}
           </div>
           <span className="text-3xl font-bold text-base-200/50 select-none">{step.number}</span>
         </div>
-        <h3 className="text-lg font-semibold text-base-900 mb-3 transition-colors">{step.title}</h3>
-        <p className="text-sm text-base-500 leading-relaxed transition-colors">{step.desc}</p>
+        <h3 className="text-lg font-semibold text-base-900 mb-3">{step.title}</h3>
+        <p className="text-sm text-base-500 leading-relaxed">{step.desc}</p>
       </div>
     </div>
   )

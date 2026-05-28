@@ -70,14 +70,14 @@ function FeatureCard({ f, i }: { f: typeof features[0]; i: number }) {
       ref={ref}
       className={`group reveal reveal-delay-${(i % 3) + 1} ${visible ? 'visible' : ''}`}
     >
-      <div className="size-10 rounded-lg bg-accent-light flex items-center justify-center text-accent mb-4 group-hover:scale-110 transition-transform duration-300">
+      <div className="size-10 rounded-lg bg-accent-light flex items-center justify-center text-accent mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-400">
         {f.icon}
       </div>
       <span className="text-3xl font-bold text-base-200/50 group-hover:text-accent/20 transition-colors duration-500 select-none">
         {f.number}
       </span>
-      <h3 className="text-lg font-semibold text-base-900 mt-3 mb-2 transition-colors">{f.title}</h3>
-      <p className="text-sm text-base-500 leading-relaxed transition-colors">{f.desc}</p>
+      <h3 className="text-lg font-semibold text-base-900 mt-3 mb-2">{f.title}</h3>
+      <p className="text-sm text-base-500 leading-relaxed">{f.desc}</p>
     </div>
   )
 }
@@ -86,7 +86,7 @@ export default function Features() {
   const { ref, visible } = useScrollReveal()
 
   return (
-    <section id="features" className="relative py-32 md:py-44 bg-base-50 transition-colors overflow-hidden">
+    <section id="features" className="relative py-32 md:py-44 bg-base-50 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div
           ref={ref}
@@ -96,7 +96,7 @@ export default function Features() {
             <span className="w-8 h-px bg-accent/50" />
             Why Seelo
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold text-base-950 tracking-tight leading-[1.05] transition-colors">
+          <h2 className="text-4xl md:text-6xl font-bold text-base-950 tracking-tight leading-[1.05]">
             Designed for
             <br />
             <span className="text-base-400">designers who ship.</span>
