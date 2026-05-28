@@ -38,7 +38,7 @@ function FeatureCard({ f, i }: { f: typeof features[0]; i: number }) {
   return (
     <div
       ref={ref}
-      className={`reveal reveal-delay-${(i % 3) + 1} ${visible ? 'visible' : ''}`}
+      className={`group reveal reveal-delay-${(i % 3) + 1} ${visible ? 'visible' : ''}`}
     >
       <span className="text-3xl font-bold text-base-200 group-hover:text-base-300 transition-colors duration-500">
         {f.number}

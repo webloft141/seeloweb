@@ -15,25 +15,18 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-12">
-            {[
-              { title: 'Product', links: ['Features', 'Downloads', 'Changelog', 'Roadmap'] },
-              { title: 'Resources', links: ['Documentation', 'API', 'Community', 'Blog'] },
-              { title: 'Company', links: ['About', 'Careers', 'Press', 'Contact'] },
-            ].map((group) => (
-              <div key={group.title}>
-                <h4 className="text-xs uppercase tracking-[0.15em] text-base-400 mb-5">{group.title}</h4>
-                <ul className="space-y-3">
-                  {group.links.map((link) => (
-                    <li key={link}>
-                      <a href="#" className="text-sm text-base-500 hover:text-base-900 transition-colors duration-200">
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="flex gap-12">
+            <div>
+              <h4 className="text-xs uppercase tracking-[0.15em] text-base-400 mb-5">Product</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#features" className="text-sm text-base-500 hover:text-base-900 transition-colors duration-200">Features</a>
+                </li>
+                <li>
+                  <a href="#downloads" className="text-sm text-base-500 hover:text-base-900 transition-colors duration-200">Downloads</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 

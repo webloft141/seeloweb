@@ -13,21 +13,18 @@ export default function Hero() {
           <span className="text-base-400">designs.</span>
         </h1>
 
-        <p className="text-base md:text-lg text-base-500 max-w-lg mx-auto mb-12 leading-relaxed animate-fade-in-up animation-delay-200">
+        <p className="text-base md:text-lg text-base-500 max-w-lg mx-auto mb-12 leading-relaxed animate-fade-in-up">
           Transform Figma designs into interactive previews. 
           Share, collaborate, and iterate in real-time.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 animate-fade-in-up animation-delay-400">
+        <div className="flex items-center justify-center animate-fade-in-up">
           <button onClick={() => document.getElementById('downloads')?.scrollIntoView({ behavior: 'smooth' })} className="px-8 py-4 rounded-full bg-base-950 text-base-50 font-semibold text-base transition-all duration-300 hover:bg-base-900 hover:shadow-xl active:scale-[0.97]">
             Download for free
           </button>
-          <button className="px-8 py-4 rounded-full text-base-500 text-base font-medium hover:text-base-900 hover:bg-base-100/80 transition-all duration-300 active:scale-[0.97] backdrop-blur-sm">
-            Watch demo
-          </button>
         </div>
 
-        <div className="mt-20 flex items-center justify-center gap-8 text-base-400 text-xs animate-fade-in-up animation-delay-600">
+        <div className="mt-20 flex items-center justify-center gap-8 text-base-400 text-xs animate-fade-in-up">
           <span>Available for</span>
           {['Windows', 'macOS', 'Linux'].map((p, i) => (
             <span key={p} className="flex items-center gap-2">

@@ -185,9 +185,7 @@ export default function DownloadSection() {
               </div>
 
               {progress >= 100 && (
-                <button className="mt-5 w-full py-3 rounded-xl bg-base-950 text-base-50 font-medium text-sm hover:bg-base-800 transition-all duration-300">
-                  Launch Seelo
-                </button>
+                <p className="mt-5 text-sm text-base-500 text-center">Download complete</p>
               )}
             </div>
           </div>

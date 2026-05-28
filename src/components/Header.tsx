@@ -22,7 +22,7 @@ export default function Header() {
         </a>
 
         <div className="hidden sm:flex items-center gap-10">
-          {['Features', 'Downloads', 'About'].map((item) => (
+          {['Features', 'Downloads'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
