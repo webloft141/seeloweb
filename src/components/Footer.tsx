@@ -5,10 +5,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start justify-between gap-12 mb-16">
           <div className="max-w-xs">
             <a href="#" className="flex items-center gap-3 mb-4 hover:opacity-80 transition-opacity">
-              <div className="size-9 rounded-xl bg-base-950 flex items-center justify-center font-bold text-sm text-base-50">
-                S
-              </div>
-              <span className="text-base-950 font-semibold text-lg transition-colors">Seelo</span>
+              <img src="/logo.png" alt="Seelo" className="size-8" />
+              <span className="text-base-950 font-semibold text-lg">Seelo</span>
             </a>
             <p className="text-sm text-base-500 leading-relaxed transition-colors">
               Preview your Figma designs before they exist.

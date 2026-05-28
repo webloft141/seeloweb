@@ -21,9 +21,7 @@ export default function Header() {
     }`}>
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <div className="size-10 rounded-xl bg-base-950 flex items-center justify-center font-bold text-lg text-base-50">
-            S
-          </div>
+          <img src="/logo.png" alt="Seelo" className="size-9" />
           <span className="font-semibold text-lg tracking-tight text-base-950">Seelo</span>
         </a>
 
