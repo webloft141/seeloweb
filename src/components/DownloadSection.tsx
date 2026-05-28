@@ -53,12 +53,6 @@ const pluginItems = [
     url: '/seelo-figma-plugin.zip',
     desc: 'Import in Figma via Plugins → Development → Import plugin from manifest',
   },
-  {
-    name: 'Node Relay Server',
-    file: 'seelo-relay-server.zip',
-    url: '/seelo-relay-server.zip',
-    desc: 'Self-host the cloud relay server (npm install && npm start)',
-  },
 ]
 
 export default function DownloadSection() {
