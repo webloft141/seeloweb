@@ -1,65 +1,26 @@
 @import "tailwindcss";
 
-:root {
-  --base-50: #fafafa;
-  --base-100: #f5f5f5;
-  --base-200: #eee;
-  --base-300: #e0e0e0;
-  --base-400: #bdbdbd;
-  --base-500: #999;
-  --base-600: #777;
-  --base-700: #555;
-  --base-800: #333;
-  --base-900: #1a1a1a;
-  --base-950: #111;
-  --accent: #4f46e5;
-  --accent-hover: #4338ca;
-  --accent-light: #eef2ff;
-  --accent-dark: #3730a3;
-  --glow: rgba(79, 70, 229, 0.15);
-}
-
-.dark {
-  --base-50: #0a0a0a;
-  --base-100: #111;
-  --base-200: #1a1a1a;
-  --base-300: #2a2a2a;
-  --base-400: #555;
-  --base-500: #777;
-  --base-600: #999;
-  --base-700: #bbb;
-  --base-800: #d4d4d4;
-  --base-900: #eee;
-  --base-950: #fafafa;
-  --accent: #818cf8;
-  --accent-hover: #6366f1;
-  --accent-light: #1e1b4b;
-  --accent-dark: #a5b4fc;
-  --glow: rgba(129, 140, 248, 0.15);
-}
-
 @theme {
-  --color-base-50: var(--base-50);
-  --color-base-100: var(--base-100);
-  --color-base-200: var(--base-200);
-  --color-base-300: var(--base-300);
-  --color-base-400: var(--base-400);
-  --color-base-500: var(--base-500);
-  --color-base-600: var(--base-600);
-  --color-base-700: var(--base-700);
-  --color-base-800: var(--base-800);
-  --color-base-900: var(--base-900);
-  --color-base-950: var(--base-950);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-accent-light: var(--accent-light);
+  --color-base-50: #fafafa;
+  --color-base-100: #f5f5f5;
+  --color-base-200: #eee;
+  --color-base-300: #e0e0e0;
+  --color-base-400: #bdbdbd;
+  --color-base-500: #999;
+  --color-base-600: #777;
+  --color-base-700: #555;
+  --color-base-800: #333;
+  --color-base-900: #1a1a1a;
+  --color-base-950: #111;
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-accent-light: #eef2ff;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 
   --animate-fade-in: fade-in 0.7s ease-out forwards;
   --animate-fade-in-up: fade-in-up 0.7s ease-out forwards;
   --animate-scale-in: scale-in 0.5s ease-out forwards;
-  --animate-float: float 6s ease-in-out infinite;
 
   @keyframes fade-in {
     from { opacity: 0; }
@@ -73,24 +34,19 @@
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
   }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
 }
 
 body {
   margin: 0;
   font-family: var(--font-sans);
-  background: var(--base-50);
-  color: var(--base-900);
+  background: var(--color-base-50);
+  color: var(--color-base-900);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 html { scroll-behavior: smooth; }
-::selection { background: var(--accent); color: white; }
+::selection { background: var(--color-accent); color: white; }
 
 .reveal { opacity: 0; transform: translateY(24px); transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -106,7 +62,7 @@ html { scroll-behavior: smooth; }
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: var(--glow);
+  background: rgba(79, 70, 229, 0.12);
   filter: blur(100px);
   pointer-events: none;
 }
