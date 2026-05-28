@@ -83,7 +83,6 @@ export default function DownloadSection() {
   const handleDownload = (platform: string, url: string) => {
     setDownloading(platform)
     setProgress(1)
-    // Simulate progress while downloading
     const a = document.createElement('a')
     a.href = DOWNLOAD_BASE + url
     a.download = platform.toLowerCase() + '-installer'
@@ -97,19 +96,20 @@ export default function DownloadSection() {
   }
 
   return (
-    <section id="downloads" className="py-32 md:py-44 bg-base-50 relative overflow-hidden">
+    <section id="downloads" className="relative py-32 md:py-44 bg-base-50 transition-colors overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div
           ref={ref}
           className={`max-w-2xl mb-20 reveal ${visible ? 'visible' : ''}`}
         >
-          <span className="text-xs uppercase tracking-[0.15em] text-base-400 mb-5 block">
+          <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-accent mb-5">
+            <span className="w-8 h-px bg-accent/50" />
             Download
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold text-base-950 tracking-tight leading-[1.05] mb-4">
-            Get Seelo — <span className="text-base-400">free.</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-base-950 tracking-tight leading-[1.05] mb-4 transition-colors">
+            Get Seelo &mdash; <span className="text-base-400">free.</span>
           </h2>
-          <p className="text-base-500 max-w-md leading-relaxed">
+          <p className="text-base-500 max-w-md leading-relaxed transition-colors">
             Download the desktop app and Figma plugin. No account required.
           </p>
         </div>
@@ -120,22 +120,22 @@ export default function DownloadSection() {
               key={platform.name}
               onClick={() => handleDownload(platform.name, platform.url)}
               disabled={downloading !== null}
-              className={`group flex items-center gap-4 p-5 rounded-xl border border-base-300 bg-base-100 hover:bg-base-200 hover:border-base-400 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98] reveal reveal-delay-${i + 1} ${visible ? 'visible' : ''}`}
+              className={`group flex items-center gap-4 p-5 rounded-xl border border-base-200 bg-base-100/50 hover:bg-base-100 hover:border-base-300 hover:shadow-md transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98] reveal reveal-delay-${i + 1} ${visible ? 'visible' : ''}`}
             >
-              <div className="size-12 rounded-lg bg-base-200 flex items-center justify-center text-base-500 group-hover:text-base-800 transition-colors duration-300">
+              <div className="size-12 rounded-lg bg-base-200/50 flex items-center justify-center text-base-500 group-hover:text-accent group-hover:bg-accent-light transition-all duration-300">
                 {platform.icon}
               </div>
               <div className="text-left">
-                <p className="text-base-800 font-medium text-sm">{platform.name}</p>
-                <p className="text-base-500 text-xs mt-0.5">{platform.file}</p>
+                <p className="text-base-800 font-medium text-sm transition-colors">{platform.name}</p>
+                <p className="text-base-400 text-xs mt-0.5 transition-colors">{platform.file}</p>
               </div>
             </button>
           ))}
         </div>
 
         <div className="max-w-2xl mb-16">
-          <span className="text-xs uppercase tracking-[0.15em] text-base-400 mb-5 block">
-            Plugins & Server
+          <span className="text-xs uppercase tracking-[0.15em] text-base-400 mb-5 block transition-colors">
+            Plugins &amp; Server
           </span>
           <div className="grid md:grid-cols-2 gap-3">
             {pluginItems.map((item, i) => (
@@ -143,11 +143,11 @@ export default function DownloadSection() {
                 key={item.name}
                 onClick={() => handleDownload(item.name, item.url)}
                 disabled={downloading !== null}
-                className={`group flex flex-col items-start gap-2 p-5 rounded-xl border border-base-300 bg-base-100 hover:bg-base-200 hover:border-base-400 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98] reveal reveal-delay-${i + 1} ${visible ? 'visible' : ''}`}
+                className={`group flex flex-col items-start gap-2 p-5 rounded-xl border border-base-200 bg-base-100/50 hover:bg-base-100 hover:border-base-300 hover:shadow-md transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98] reveal reveal-delay-${i + 1} ${visible ? 'visible' : ''}`}
               >
-                <p className="text-base-800 font-medium text-sm">{item.name}</p>
-                <p className="text-base-500 text-xs">{item.desc}</p>
-                <p className="text-base-400 text-xs mt-1 font-mono">{item.file}</p>
+                <p className="text-base-800 font-medium text-sm transition-colors">{item.name}</p>
+                <p className="text-base-500 text-xs transition-colors">{item.desc}</p>
+                <p className="text-base-400 text-xs mt-1 font-mono transition-colors">{item.file}</p>
               </button>
             ))}
           </div>
@@ -155,20 +155,20 @@ export default function DownloadSection() {
 
         {downloading && (
           <div className="max-w-md animate-fade-in-up">
-            <div className="p-6 rounded-2xl border border-base-300 bg-base-100 shadow-sm">
+            <div className="p-6 rounded-2xl border border-base-200 bg-base-100/80 backdrop-blur-sm shadow-lg">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <p className="text-sm text-base-800 font-medium">
-                    Downloading {downloading} version
+                  <p className="text-sm text-base-800 font-medium transition-colors">
+                    Downloading {downloading}
                   </p>
-                  <p className="text-xs text-base-500 mt-0.5">
-                    {progress < 100 ? `${Math.floor(progress)}%` : 'Download complete'}
+                  <p className="text-xs text-base-500 mt-0.5 transition-colors">
+                    {progress < 100 ? `${Math.floor(progress)}%` : 'Complete'}
                   </p>
                 </div>
                 {progress < 100 && (
                   <button
                     onClick={resetDownload}
-                    className="size-7 rounded-md bg-base-200 flex items-center justify-center text-base-500 hover:text-base-800 hover:bg-base-300 transition-colors"
+                    className="size-7 rounded-lg bg-base-200/50 flex items-center justify-center text-base-500 hover:text-base-800 hover:bg-base-200 transition-all"
                   >
                     <svg className="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -177,15 +177,15 @@ export default function DownloadSection() {
                 )}
               </div>
 
-              <div className="relative h-1 rounded-full bg-base-200 overflow-hidden">
+              <div className="relative h-1.5 rounded-full bg-base-200 overflow-hidden">
                 <div
-                  className="absolute inset-y-0 left-0 rounded-full bg-base-950 transition-all duration-200 ease-out"
+                  className="absolute inset-y-0 left-0 rounded-full bg-accent transition-all duration-200 ease-out"
                   style={{ width: `${Math.min(progress, 100)}%` }}
                 />
               </div>
 
               {progress >= 100 && (
-                <p className="mt-5 text-sm text-base-500 text-center">Download complete</p>
+                <p className="mt-4 text-sm text-base-500 text-center transition-colors">Download complete</p>
               )}
             </div>
           </div>
