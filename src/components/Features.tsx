@@ -3,33 +3,33 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 const features = [
   {
     number: '01',
-    title: 'Real-time preview',
-    desc: 'See changes instantly as you design. Sub-millisecond latency, zero compromise.',
+    title: 'Real-time sync',
+    desc: 'Edit in Figma, see changes in the preview instantly. No exporting, no uploading, no waiting.',
   },
   {
     number: '02',
-    title: 'Team collaboration',
-    desc: 'Share previews with your team. Collect and resolve feedback in one place.',
+    title: 'Interactive previews',
+    desc: 'Transitions, hover states, overlays — everything works. Your designs behave like the real product.',
   },
   {
     number: '03',
-    title: 'Version history',
-    desc: 'Every change is tracked. Compare, restore, or branch any iteration.',
+    title: 'Share without accounts',
+    desc: 'Generate a link and share with anyone. Clients and stakeholders can view previews without signing up.',
   },
   {
     number: '04',
-    title: 'Plugin ecosystem',
-    desc: 'Extend with community plugins or build your own custom integrations.',
+    title: 'Figma plugin + desktop app',
+    desc: 'Works as a Figma plugin and a standalone desktop app. Pick the workflow that suits you.',
   },
   {
     number: '05',
-    title: 'Export anything',
-    desc: 'Export to PNG, SVG, PDF, or generate production-ready React components.',
+    title: 'Self-host or use cloud',
+    desc: 'Use our hosted relay or self-host for complete control over your data. Your choice.',
   },
   {
     number: '06',
-    title: 'Lightning fast',
-    desc: 'Zero bloat, instant startup. Built for speed, designed for focus.',
+    title: 'Version compare',
+    desc: 'Preview two versions side-by-side. See exactly what changed, down to the pixel.',
   },
 ]
 
@@ -62,10 +62,12 @@ export default function Features() {
           className={`max-w-2xl mb-24 reveal ${visible ? 'visible' : ''}`}
         >
           <span className="text-xs uppercase tracking-[0.15em] text-base-400 mb-5 block">
-            Features
+            Why Seelo
           </span>
           <h2 className="text-4xl md:text-6xl font-bold text-base-950 tracking-tight leading-[1.05]">
-            Everything you need to ship better designs.
+            Designed for
+            <br />
+            <span className="text-base-400">designers who ship.</span>
           </h2>
         </div>
 

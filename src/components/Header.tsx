@@ -22,10 +22,10 @@ export default function Header() {
         </a>
 
         <div className="hidden sm:flex items-center gap-10">
-          {['Features', 'Downloads'].map((item) => (
+          {['Features', 'How it works', 'Downloads'].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
               className="text-sm font-medium text-base-500 hover:text-base-950 transition-colors duration-300"
             >
               {item}

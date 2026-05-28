@@ -107,10 +107,10 @@ export default function DownloadSection() {
             Download
           </span>
           <h2 className="text-4xl md:text-6xl font-bold text-base-950 tracking-tight leading-[1.05] mb-4">
-            Ready to get started?
+            Get Seelo — <span className="text-base-400">free.</span>
           </h2>
           <p className="text-base-500 max-w-md leading-relaxed">
-            Choose your platform. Free download, no account required.
+            Download the desktop app and Figma plugin. No account required.
           </p>
         </div>
 
